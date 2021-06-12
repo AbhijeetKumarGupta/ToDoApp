@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap");
+
+body {
+  background-color: #d5f6f6;
+}
+
+#form-one {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Lobster", cursive;
+  font-size: 70px;
+  color: #0f3d3c;
+  text-decoration: underline;
+}
+
+#text-box {
+  display: flex;
+  justify-content: center;
+  font-family: "Dancing Script", cursive;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #8c83c9;
+  border-color: #d5f6f6;
+}
+
+#text-box:hover {
+  background-color: #ffffcc;
+  border-color: black;
+}
+
+#todoList {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+#list {
+  max-width: 500px;
+  margin: 48px auto;
+}
+
+.listItem {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 0px 10px;
+  margin: 12px 0;
+  border-radius: 6px;
+  background-color: #ffff99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #191970;
+}
+
+.tempInput {
+  margin-top: 22px;
+  font-size: 22px;
+  font-family: "Dancing Script", cursive;
+  color: #8c83c9;
+  border-color: #d5f6f6;
+}
+
+.listItem:hover {
+  background-color: #fff;
+}
+
+.button {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  border: none;
+}
+
+#addButton {
+  background-color: #fff;
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  border-color: #d5f6f6;
+}
+
+#addButton:hover {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  border-color: #ff4500;
+}
+
+i {
+  color: #595959;
+  margin: 5px;
+}
+
+i:hover {
+  color: #ff4500;
+  margin: 5px;
+  cursor: pointer;
+}
