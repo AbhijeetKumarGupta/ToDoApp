@@ -28,32 +28,6 @@ addEventListener("click", function () {
   contextMenuDiv.style.display = "none";
 });
 
-if (localStorage.getItem("toDoListData") != undefined) {
-  var tdl = JSON.parse(localStorage.getItem("toDoListData"));
-  console.log(tdl);
-  for (var i = 0; i < tdl.length; i++) {
-    addItem(tdl[i].message, tdl[i].date);
-  }
-}
-
-addBut.addEventListener("click", function (e) {
-  if (textBox.value != "") {
-    var valTextBox = textBox.value;
-    var dateCur = new Date().toUTCString();
-    var objArr =
-      localStorage.getItem("toDoListData") == undefined
-        ? []
-        : JSON.parse(localStorage.getItem("toDoListData"));
-    objArr.push({
-      message: valTextBox,
-      date: dateCur,
-    });
-    localStorage.setItem("toDoListData", JSON.stringify(objArr));
-    console.log(localStorage.getItem("toDoListData"));
-    addItem(valTextBox, dateCur);
-  }
-});
-
 /// FUNCTION TO ADD ITEM ///
 function addItem(textVal, dateVal) {
   var divListItem = document.createElement("div");
@@ -202,3 +176,30 @@ function addItem(textVal, dateVal) {
     });
   });
 }
+//////////////////////////
+
+if (localStorage.getItem("toDoListData") != undefined) {
+  var tdl = JSON.parse(localStorage.getItem("toDoListData"));
+  console.log(tdl);
+  for (var i = 0; i < tdl.length; i++) {
+    addItem(tdl[i].message, tdl[i].date);
+  }
+}
+
+addBut.addEventListener("click", function (e) {
+  if (textBox.value != "") {
+    var valTextBox = textBox.value;
+    var dateCur = new Date().toUTCString();
+    var objArr =
+      localStorage.getItem("toDoListData") == undefined
+        ? []
+        : JSON.parse(localStorage.getItem("toDoListData"));
+    objArr.push({
+      message: valTextBox,
+      date: dateCur,
+    });
+    localStorage.setItem("toDoListData", JSON.stringify(objArr));
+    console.log(localStorage.getItem("toDoListData"));
+    addItem(valTextBox, dateCur);
+  }
+});
