@@ -1,81 +1,129 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+body {
+  background-color: #ffffe6;
 }
 
-#clothingDiv,
-#accessoriesDiv {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0 4%;
-}
-
-#clothingHeading {
-  margin-top: 50px;
-  margin-left: 70px;
-  color: rgb(27, 25, 25);
-  font-family: "Montserrat", sans-serif;
-}
-
-#accessoriesHeading {
-  margin-top: 100px;
-  margin-left: 70px;
-  color: rgb(27, 25, 25);
-  font-family: "Montserrat", sans-serif;
-}
-
-.card {
-  width: 15%;
-  min-width: 200px;
-  height: auto;
-  margin: 30px 10px;
-  cursor: pointer;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.card:hover {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-}
-.card .img img {
-  width: 100%;
-}
-
-.card .details {
-  padding-left: 10px;
-  margin: 10px auto;
-}
-.card .details h3 {
-  text-align: left;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  color: rgb(27, 25, 25);
-}
-
-.card .details h4 {
-  margin-top: 10px;
-  text-align: left;
-  font-size: 12px;
-  color: rgb(110, 110, 110);
-}
-
-.card .details h5 {
-  margin-top: 10px;
-  text-align: left;
+p {
   font-size: 15px;
-  letter-spacing: 2px;
-  color: #009688;
 }
 
-@media screen and (max-width: 500px) {
-  .card {
-    width: 35%;
-    min-width: 115px;
-  }
+#form-one {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Lobster", cursive;
+  font-size: 70px;
+  color: #0f3d3c;
+  text-decoration: underline;
+}
+
+#text-box {
+  display: flex;
+  justify-content: center;
+  font-family: "Dancing Script", cursive;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #8c83c9;
+  border-color: #d5f6f6;
+}
+
+#text-box:hover {
+  background-color: #ffffcc;
+  border-color: black;
+}
+
+#todoList {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+#list {
+  max-width: 500px;
+  margin: 48px auto;
+}
+
+.listItem {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 0px 25px;
+  margin: 12px 0;
+  border-radius: 6px;
+  background-color: #ffff99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #191970;
+}
+
+.tempInput {
+  margin-top: 22px;
+  font-size: 22px;
+  font-family: "Dancing Script", cursive;
+  color: #8c83c9;
+  border-color: #d5f6f6;
+}
+
+.listItem:hover {
+  background-color: #fff;
+}
+
+.button {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  border: none;
+}
+
+#addButton {
+  background-color: #fff;
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  border-color: #d5f6f6;
+}
+
+#addButton:hover {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  border-color: #ff4500;
+}
+
+i {
+  color: #595959;
+  margin: 5px;
+}
+
+i:hover {
+  color: #ff4500;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#cm {
+  box-sizing: border-box;
+  font-family: "Lobster", cursive;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+  position: absolute;
+  display: none;
+  width: 100px;
+  padding: 10px;
+  background-color: #e6fff5;
+}
+
+.cmItems {
+  padding-left: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin: 5px;
+}
+
+.cmItems:hover {
+  background-color: #e6e6fa;
+  cursor: pointer;
 }
