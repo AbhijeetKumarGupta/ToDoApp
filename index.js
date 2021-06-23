@@ -66,12 +66,7 @@ function addItem(textVal, dateVal) {
     divListItem.remove();
     var mesVal = itemHolder.innerHTML;
     var tdld = JSON.parse(localStorage.getItem("toDoListData"));
-    for (var i = 0; i < tdld.length; i++) {
-      if (tdld[i].message == mesVal) {
-        tdld.splice(i, 1);
-        break;
-      }
-    }
+    tdld.splice(tdld.indexOf(mesVal), 1);
     localStorage.setItem("toDoListData", JSON.stringify(tdld));
   });
 
@@ -102,13 +97,9 @@ function addItem(textVal, dateVal) {
       editCM.style.pointerEvents = "auto";
       deleteIcon.style.pointerEvents = "auto";
       deleteCM.style.pointerEvents = "auto";
-      for (var i = 0; i < tdld.length; i++) {
-        if (tdld[i].message == mesVal) {
-          tdld[i].message = valTemp;
-          tdld[i].date = new Date().toUTCString();
-          break;
-        }
-      }
+
+      tdld[tdld.indexOf(mesVal)].date = new Date().toUTCString();
+      tdld[tdld.indexOf(mesVal)].message = valTemp;
       localStorage.setItem("toDoListData", JSON.stringify(tdld));
     });
   });
@@ -147,13 +138,8 @@ function addItem(textVal, dateVal) {
           editCM.style.pointerEvents = "auto";
           deleteCM.style.pointerEvents = "auto";
           deleteIcon.style.pointerEvents = "auto";
-          for (var i = 0; i < tdld.length; i++) {
-            if (tdld[i].message == mesVal) {
-              tdld[i].message = valTemp;
-              tdld[i].date = new Date().toUTCString();
-              break;
-            }
-          }
+          tdld[tdld.indexOf(mesVal)].date = new Date().toUTCString();
+          tdld[tdld.indexOf(mesVal)].message = valTemp;
           localStorage.setItem("toDoListData", JSON.stringify(tdld));
         });
       }
@@ -164,12 +150,7 @@ function addItem(textVal, dateVal) {
         divListItem.remove();
         var mesVal = itemHolder.innerHTML;
         var tdld = JSON.parse(localStorage.getItem("toDoListData"));
-        for (var i = 0; i < tdld.length; i++) {
-          if (tdld[i].message == mesVal) {
-            tdld.splice(i, 1);
-            break;
-          }
-        }
+        tdld.splice(tdld.indexOf(mesVal), 1);
         localStorage.setItem("toDoListData", JSON.stringify(tdld));
       }
       count++;
